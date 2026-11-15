@@ -91,8 +91,11 @@ SAHI. Ідея: нарізати кадр у повній роздільност
 
 ## Final model and run instructions
 **Модель:** Faster R-CNN ResNet-50-FPN v2 (COCO-ваги), вхід 1280, label smoothing 0.1, навчена на train+val.
+
 **Середовище:** Colab, T4, torch 2.14.1, torchvision 0.29.1, albumentations, pycocotools.
+
 **Навчання:** кожен 3-й кадр train+val, ігноровані зони залито сірим; аугментації: flip, affine та color jitter; SGD lr 0.01, warmup + cosine, 3 епохи, batch 8; seed 42.
+
 **Запуск** (faster_r-cnn_and_retinanet.ipynb):
 Вказати шлях до архіву (ZIP_PATH) і папку для чекпойнтів (CKPT_DIR).
 Запустити клітинки підготовки даних і функції моделі.
